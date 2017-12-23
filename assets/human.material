@@ -1,0 +1,57 @@
+material human_0_base
+{
+    receive_shadows on
+
+    technique
+    {
+        pass
+        {
+            lighting on
+
+            ambient 0.110000 0.110000 0.110000 1
+            diffuse 0.590333 0.440000 0.338000 1.000000
+            specular 0.300000 0.300000 0.300000 122.880000
+            emissive 0.000000 0.000000 0.000000
+
+            depth_write on
+
+            //texture_unit litsphereTexture
+            //{
+            //    texture textures/adaptive_skin_tone.png
+            //}
+
+        }
+    }
+}
+
+material human_1_high_poly
+{
+    receive_shadows on
+
+    technique
+    {
+        pass
+        {
+            lighting on
+
+            ambient 0.110000 0.110000 0.110000 1
+            diffuse 1.000000 1.000000 1.000000 1.000000
+            specular 1.000000 1.000000 1.000000 128.000000
+            emissive 0.000000 0.000000 0.000000
+
+            depth_write off
+            alpha_rejection greater 128
+
+            texture_unit diffuseTexture
+            {
+                texture textures/brown_eye.png
+            }
+
+            //texture_unit litsphereTexture
+            //{
+            //    texture textures/skinmat_eye.png
+            //}
+
+        }
+    }
+}
